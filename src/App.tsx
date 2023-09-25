@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 import AppMenu from './components/AppMenu';
 
+
 function App() {
   const [menuItems] = useState([
     { name: 'Inicio', path: '/' }, // Defina os caminhos para cada item do menu
