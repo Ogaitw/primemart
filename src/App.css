@@ -1,4 +1,10 @@
 /* App.css */
+.app {
+  background-color: #111111; /* Cor de fundo azul, você pode substituir pela cor desejada */
+  min-height: 100vh; /* Define a altura mínima para ocupar a tela inteira */
+}
+
+
 .container {
   padding: 20px;
 }

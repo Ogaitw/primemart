@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal, Form, Grid, Segment, Divider } from 'semantic-ui-react';
-import * as styles from '../utils/theme'; // Importe os estilos do arquivo styles.ts
+import * as styles from '../utils/theme';
 
 const LoginButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,14 +29,14 @@ const LoginButton: React.FC = () => {
     <div>
       <Button
         icon="user"
-        content={showLoginForm ? 'Login' : 'Sign Up'}
+        content={showLoginForm ? 'Entrar' : 'Entrar'}
         onClick={showLoginForm ? handleLoginButtonClick : handleSignUpButtonClick}
         className={`${styles.loginButtonStyle.toString()} ${
           showLoginForm ? styles.loginStyle.toString() : styles.signUpStyle.toString()
         } ${styles.removeFocusOutline.toString()}`}
       />
       <Modal open={isOpen} onClose={handleClose}>
-        <Modal.Header>{showLoginForm ? 'Login' : 'Sign Up'}</Modal.Header>
+        <Modal.Header>{showLoginForm ? 'Login' : 'Recuperar Senha'}</Modal.Header>
         <Modal.Content>
           {showLoginForm && (
             <Segment placeholder>
@@ -46,23 +46,23 @@ const LoginButton: React.FC = () => {
                     <Form.Input
                       icon='user'
                       iconPosition='left'
-                      label='Username'
-                      placeholder='Username'
+                      label='Usuário'
+                      placeholder='Usuário'
                     />
                     <Form.Input
                       icon='lock'
                       iconPosition='left'
-                      label='Password'
-                      type='password'
+                      label='Senha'
+                      type='Senha'
                     />
 
-                    <Button content='Login' primary />
+                    <Button content='Entrar' primary />
                   </Form>
                 </Grid.Column>
 
                 <Grid.Column verticalAlign='middle'>
                   <Button
-                    content='Sign up'
+                    content='Esqueceu a senha?'
                     icon='signup'
                     size='big'
                     onClick={handleSignUpButtonClick}
@@ -83,17 +83,12 @@ const LoginButton: React.FC = () => {
                     <Form.Input
                       icon='user'
                       iconPosition='left'
-                      label='Username'
-                      placeholder='Username'
+                      label='Usuário'
+                      placeholder='Usuário'
                     />
-                    <Form.Input
-                      icon='lock'
-                      iconPosition='left'
-                      label='Password'
-                      type='password'
-                    />
+                    
 
-                    <Button content='Sign Up' primary className="customSignUp" />
+                    <Button content='Entrar' primary className="customSignUp" />
                   </Form>
                 </Grid.Column>
 
